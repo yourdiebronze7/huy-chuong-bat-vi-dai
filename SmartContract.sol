@@ -9,8 +9,8 @@ contract HuyChuong {
         uint256 thoiGianTrao;
         address nguoiNhan;
     }
-    
-mapping(uint256 => HuyChuongInfo) public huyChuong;
+
+    mapping(uint256 => HuyChuongInfo) public huyChuong;
     uint256 public huyChuongCount;
 
     event NewHuyChuong(uint256 id, string tenHuyChuong, string lyDo, address nguoiNhan);
