@@ -10,7 +10,7 @@ contract HuyChuong {
         address nguoiNhan;
     }
     
-    mapping(uint256 => HuyChuongInfo) public huyChuong;
+mapping(uint256 => HuyChuongInfo) public huyChuong;
     uint256 public huyChuongCount;
 
     event NewHuyChuong(uint256 id, string tenHuyChuong, string lyDo, address nguoiNhan);
@@ -21,7 +21,7 @@ contract HuyChuong {
         emit NewHuyChuong(huyChuongCount, _tenHuyChuong, _lyDo, _nguoiNhan);
     }
 
-    function traCuuHuyChuong(uint256 _id) public view returns (HuyChuongInfo memory) {
+    function timHuyChuong(uint256 _id) public view returns (HuyChuongInfo memory) {
         return huyChuong[_id];
     }
 }
