@@ -1,7 +1,7 @@
 {
   "name": "huy-chuong-bat-vi-dai",
   "version": "1.0.0",
-  "description": "Dự án Huy Chương Bất Vĩ Đại - Nền tảng quản lý huy chương",
+  "description": "Dự án Huy Chương Bất Vĩ Đại - Nền tảng quản lý và phân tích huy chương",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
