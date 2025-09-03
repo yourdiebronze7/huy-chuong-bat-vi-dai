@@ -2,7 +2,7 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require('web3');
 
 const infuraKey = 'YOUR_INFURA_KEY';
-const mnemonic = 'YOUR_MNEMONIC';
+const walletMnemonic = 'YOUR_MNEMONIC';
 
 module.exports = {
   networks: {
@@ -12,7 +12,7 @@ module.exports = {
       network_id: '*',
     },
     ropsten: {
-      provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/${infuraKey}`),
+      provider: () => new HDWalletProvider(walletMnemonic, `https://ropsten.infura.io/v3/${infuraKey}`),
       network_id: 3,
       gas: 5500000,
     },
