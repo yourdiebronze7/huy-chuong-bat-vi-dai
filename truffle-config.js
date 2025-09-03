@@ -1,8 +1,8 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require('web3');
 
-const infuraKey = 'YOUR_INFURA_PROJECT_ID';
-const walletMnemonic = 'YOUR_MNEMONIC';
+const infuraKey = process.env.INFURA_PROJECT_ID;  // Use environment variable
+const walletMnemonic = process.env.MNEMONIC; // Use environment variable
 
 module.exports = {
   networks: {
