@@ -1,7 +1,7 @@
 {
   "name": "huy-chuong-bat-vi-dai",
   "version": "1.0.0",
-  "description": "Huy Chương Bất Vĩ Đại Project - A platform for managing and analyzing medals",
+  "description": "Huy Chương Bất Vĩ Đại Project - A platform for managing and analyzing achievements in medal collecting",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
