@@ -1,27 +1,27 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract HuyChuong {
-    struct HuyChuongInfo {
-        string tenHuyChuong;
-        string lyDo;
-        string hinhAnh;
-        uint256 thoiGianTrao;
-        address nguoiNhan;
+contract Award {
+    struct AwardInfo {
+        string awardName;
+        string reason;
+        string image;
+        uint256 timestamp;
+        address recipient;
     }
 
-    mapping(uint256 => HuyChuongInfo) public huyChuong;
-    uint256 public huyChuongCount;
+    mapping(uint256 => AwardInfo) public awards;
+    uint256 public awardCount;
 
-    event NewHuyChuong(uint256 id, string tenHuyChuong, string lyDo, address nguoiNhan);
+    event NewAward(uint256 id, string awardName, string reason, address recipient);
 
-    function taoHuyChuong(string memory _tenHuyChuong, string memory _lyDo, string memory _hinhAnh, address _nguoiNhan) public {
-        huyChuongCount++;
-        huyChuong[huyChuongCount] = HuyChuongInfo(_tenHuyChuong, _lyDo, _hinhAnh, block.timestamp, _nguoiNhan);
-        emit NewHuyChuong(huyChuongCount, _tenHuyChuong, _lyDo, _nguoiNhan);
+    function createAward(string memory _awardName, string memory _reason, string memory _image, address _recipient) public {
+        awardCount++;
+        awards[awardCount] = AwardInfo(_awardName, _reason, _image, block.timestamp, _recipient);
+        emit NewAward(awardCount, _awardName, _reason, _recipient);
     }
 
-    function timHuyChuong(uint256 _id) public view returns (HuyChuongInfo memory) {
-        return huyChuong[_id];
+    function getAward(uint256 _id) public view returns (AwardInfo memory) {
+        return awards[_id];
     }
 }
