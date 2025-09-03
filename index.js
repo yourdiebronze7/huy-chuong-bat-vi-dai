@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.send('Chào mừng đến với nền tảng Huy Chương Bất Vĩ Đại!');
+    res.send('Chào mừng đến với nền tảng Huy Chương Vĩ Đại!');
 });
 
 app.listen(port, () => {
